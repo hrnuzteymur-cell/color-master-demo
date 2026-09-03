@@ -1,0 +1,62 @@
+how{display:block}
+@media(max-width:900px){.finderPage{height:calc(100dvh - 122px);padding:8px;min-height:680px}.finderWorkspace{grid-template-columns:1fr;grid-template-rows:minmax(360px,1fr) auto}.finderSide{grid-template-columns:118px minmax(0,1fr);align-items:stretch}.finderSideHead,.finderHint,.finderSampleBtn,.finderError,.finderMiniNote{grid-column:1/-1}.finderColorPreview{height:auto;min-height:118px;grid-row:2/span 2}.finderValues{grid-column:2}.finderToolbar{align-items:flex-start}.finderTitle p{max-width:420px}}
+@media(max-width:600px){.finderPage{height:auto;min-height:calc(100dvh - 142px)}.finderToolbar{display:block}.finderTitleIcon{width:34px;height:34px}.finderActions{margin-top:9px;display:grid;grid-template-columns:1fr 1fr}.finderBtn,.finderFile{padding:10px 7px}.finderWorkspace{grid-template-rows:58vh auto}.finderSide{grid-template-columns:88px minmax(0,1fr);padding:10px}.finderColorPreview{min-height:100px}.finderValue b{font-size:13px}.finderMode{bottom:10px;left:10px}.finderZoom{right:10px;bottom:10px}.finderTopOverlay{left:10px;top:10px}.finderStatus{max-width:230px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+</style>
+<style>
+/* ===== Renk Bulucu V24 - tek ekran profesyonel mobil çalışma alanı ===== */
+:root{--finderTopH:78px}
+body.finderActive{overflow:hidden}
+.finderPage{height:calc(100dvh - var(--finderTopH));min-height:0;padding:8px;overflow:hidden}
+.finderShell{height:100%;min-height:0;grid-template-rows:auto minmax(0,1fr)}
+.finderToolbar{padding:8px 10px;border-radius:13px;min-height:54px}
+.finderTitleIcon{width:32px;height:32px;border-radius:9px;font-size:16px}
+.finderTitle h2{font-size:16px}.finderTitle p{font-size:10px}
+.finderActions{gap:5px}.finderBtn,.finderFile{padding:7px 9px;font-size:11px}
+.finderWorkspace{min-height:0;grid-template-columns:minmax(0,1fr) 310px;gap:8px}
+.finderStageWrap{min-height:0}.finderStage{min-height:0}
+.finderSide{padding:9px;gap:7px;overflow:hidden;grid-template-rows:auto auto auto auto auto}
+.finderSideHead{min-height:22px}
+.finderColorPreview{height:74px;border-radius:10px}
+.finderValues{display:grid;grid-template-columns:1fr;gap:5px}
+.finderValue{padding:7px 8px;border-radius:9px}.finderValue b{font-size:13px;margin-top:1px}.finderValue span{font-size:8px}
+.finderRatios{display:grid;grid-template-columns:1fr 1fr;gap:5px}.finderRatio{border:1px solid var(--line);background:#fbfdff;border-radius:9px;padding:6px 7px;min-width:0}.finderRatio span{display:block;color:var(--muted);font-size:8px;font-weight:900;text-transform:uppercase}.finderRatio b{display:block;font-size:10px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.finderHint{padding:7px 8px;font-size:10px}.finderMiniNote{font-size:9px}.finderSampleBtn{padding:9px;font-size:11px}
+.finderModeTabs{display:flex;gap:5px;align-items:center}.finderModeTabs button{border:1px solid #cbd5e1;background:#f8fafc;color:var(--nav);border-radius:9px;padding:7px 9px;font-size:10px;font-weight:900}.finderModeTabs button.active{background:var(--nav);color:#fff;border-color:var(--nav)}
+.finderManual{height:100%;min-height:0;padding:12px;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:10px;background:#fff;border-radius:16px}
+.finderManual.hidden{display:none}
+.manualHead{display:flex;align-items:center;justify-content:space-between;gap:8px}.manualHead h3{margin:0;font-size:14px}.manualHead p{margin:2px 0 0;color:var(--muted);font-size:10px}.manualCurrent{width:46px;height:46px;border-radius:12px;border:1px solid var(--line);box-shadow:inset 0 0 0 1px #fff}.manualHexJump{display:flex;align-items:center;gap:5px;margin-left:auto}.manualHexJump input{width:92px;height:34px;border:1px solid #cbd5e1;border-radius:9px;padding:0 8px;text-transform:uppercase;outline:0;background:#fff;color:var(--text);font-weight:800}.manualHexJump input:focus{border-color:#3b82f6;box-shadow:0 0 0 3px #dbeafe}.manualHexJump button{height:34px;border:0;border-radius:9px;padding:0 10px;background:var(--nav);color:#fff;font-size:10px;font-weight:900}.manualHexJump input.invalid{border-color:#ef4444;box-shadow:0 0 0 3px #fee2e2}
+.manualPickerArea{min-height:0;display:grid;grid-template-rows:minmax(180px,1fr) 34px;gap:10px}
+/* V26B: Görsel SV alanı ile HSV hesaplaması aynı kompozisyon sırasına getirildi */
+.manualSV{position:relative;min-height:180px;border-radius:14px;overflow:hidden;touch-action:none;cursor:crosshair;background-color:#ff0000;background-image:linear-gradient(to top,#000 0%,rgba(0,0,0,0) 100%),linear-gradient(to right,#fff 0%,rgba(255,255,255,0) 100%);box-shadow:inset 0 0 0 1px #0002}
+.manualCursor{position:absolute;width:24px;height:24px;border:2px solid #fff;border-radius:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 2px #0008;pointer-events:none}.manualHexBubble{position:absolute;z-index:4;transform:translate(-50%,-100%);background:#0f172a;color:#fff;border:1px solid #ffffff35;border-radius:8px;padding:5px 8px;font-size:10px;font-weight:900;letter-spacing:.03em;line-height:1;box-shadow:0 5px 14px #0005;pointer-events:none;white-space:nowrap}.manualHexBubble.below{transform:translate(-50%,0)}
+.manualHue{width:100%;height:28px;appearance:none;border-radius:999px;outline:0;background:linear-gradient(90deg,#f00,#ff0,#0f0,#0ff,#00f,#f0f,#f00)}.manualHue::-webkit-slider-thumb{appearance:none;width:24px;height:24px;border-radius:50%;background:#fff;border:2px solid #111827;box-shadow:0 2px 6px #0004}.manualHue::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#fff;border:2px solid #111827}
+
+.finderImagePanel{height:100%;min-height:0}.finderImagePanel.hidden{display:none}
+.archiveThumb{width:58px;min-height:100%;display:flex;align-items:stretch;background:#f1f5f9}.archiveThumb img{width:100%;height:100%;object-fit:cover}.archiveSwatch.withThumb{min-height:48%;height:48%}.archiveVisual{display:grid;grid-template-rows:1fr 1fr;min-height:100px}.archiveVisual .archiveSwatch{height:auto;min-height:0}.archiveDataGrid{display:grid;grid-template-columns:1fr 1fr;gap:2px 8px;margin-top:5px;border-top:1px solid var(--line);padding-top:4px}.archiveDataGrid p{margin:1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:900px){
+  body.finderActive .topin{padding:6px 8px;gap:5px;flex-wrap:wrap}
+  body.finderActive .logo{width:30px;height:30px;border-radius:9px;font-size:11px}
+  body.finderActive .brand h1{font-size:13px}
+  body.finderActive .brand p,body.finderActive .actions{display:none}
+  body.finderActive .navtabs{order:3;width:100%;display:flex;flex-wrap:nowrap;overflow-x:auto;gap:4px;padding-bottom:1px;scrollbar-width:none}
+  body.finderActive .navtabs::-webkit-scrollbar{display:none}
+  body.finderActive .navtabs button{flex:0 0 auto;padding:6px 8px;font-size:10px;white-space:nowrap}
+  .finderPage{padding:5px}
+  .finderToolbar{padding:6px 7px;min-height:46px}
+  .finderTitle p{display:none}.finderTitleIcon{width:28px;height:28px}.finderTitle h2{font-size:14px}
+  .finderActions{margin-left:auto}.finderBtn,.finderFile{padding:6px 7px;font-size:10px}
+  .finderWorkspace{grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) 126px;gap:5px}
+  .finderSide{grid-template-columns:72px minmax(0,1fr) 112px;grid-template-rows:18px minmax(0,1fr) 28px;gap:4px;padding:6px;align-items:stretch;overflow:hidden}
+  .finderSideHead{grid-column:1/-1;grid-row:1}.finderColorPreview{grid-column:1;grid-row:2/4;height:auto;min-height:0}.finderValues{grid-column:2;grid-row:2/4;display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.finderValue{padding:5px 6px}.finderValue b{font-size:10px;line-height:1.2}.finderValue span{font-size:7px}
+  .finderRatios{grid-column:3;grid-row:2;display:grid;grid-template-columns:1fr;gap:3px}.finderRatio{padding:4px 5px}.finderRatio b{font-size:8px}.finderRatio span{font-size:7px}
+  .finderSampleBtn{grid-column:3;grid-row:3;align-self:stretch;padding:5px 4px;font-size:8px;transform:none}
+  .finderHint,.finderError,.finderMiniNote{display:none!important}
+  .finderManual{padding:8px;gap:7px}.manualPickerArea{grid-template-rows:minmax(140px,1fr) 28px;gap:7px}.manualSV{min-height:140px}.manualHue{height:24px}
+}
+@media(max-width:560px){
+  .finderToolbar{display:flex;align-items:center;gap:5px}.finderTitle{min-width:0}.finderTitleIcon{display:none}.finderTitle h2{white-space:nowrap}
+  .finderActions{display:flex;margin-top:0;flex-wrap:nowrap}.finderActions .finderBtn{display:none}.finderFile{font-size:9px;padding:6px}
+  .finderModeTabs{margin-left:auto}.finderModeTabs button{padding:5px 6px;font-size:9px}
+  .finderWorkspace{grid-template-rows:minmax(0,1fr) 122px}
+  .finderMode{left:7px;bottom:7px}.finderMode button{padding:6px 7px;font-size:9px}.finderZoom{right:7px;bottom:7px}.finderZoom button{width:30px;height:30px;font-size:15px}.finderZoom button:nth-child(2){padding:0 7px;font-size:9px}.finderTopOverlay{left:7px;top:7px}.finderStatus{padding:5px 7px;font-size:9px;max-width:175px}
+  .finderTarget{width:46px;height:46px}.finderTarget:before{widt
