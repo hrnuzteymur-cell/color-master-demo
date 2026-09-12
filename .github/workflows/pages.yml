@@ -32,8 +32,9 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p site
-          cp privacy_policy.html site/index.html
-          cp privacy_policy.html site/privacy_policy.html
+          cp color-matrix-privacy.html site/index.html
+          cp color-matrix-privacy.html site/privacy_policy.html
+          cp color-matrix-privacy.html site/color-matrix-privacy.html
           cp app-ads.txt site/app-ads.txt
           cp index.html site/demo.html
 
