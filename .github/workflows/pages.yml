@@ -34,7 +34,7 @@ jobs:
           mkdir -p site
           : > site/index.html
           for f in exact2/part00.bin.b64 exact2/part01.bin.b64 exact2/part02.bin.b64 exact2/part03.bin.b64 exact2/part04.bin.b64 exact2/part05.bin.b64 exact2/part06.bin.b64 exact2/part07.bin.b64; do
-            base64 -d "$f" >> site/index.html
+            base64 --decode --ignore-garbage "$f" >> site/index.html
           done
           test "$(wc -c < site/index.html)" -eq 82262
           echo "e812f3603324d5a0201ee8dd53b7f10e3995861a433e1285ab949a66a80a94a6  site/index.html" | sha256sum -c -
