@@ -1,4 +1,4 @@
-name: Deploy Color Master Demo
+name: Deploy Color Matrix Privacy Site
 
 on:
   push:
@@ -27,19 +27,15 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Rebuild canonical Color Master HTML
+      - name: Prepare Color Matrix site
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p site
-          : > site/index.html
-          for f in exact2/part00.bin.b64 exact2/part01.bin.b64 exact2/part02.bin.b64 exact2/part03.bin.b64 exact2/part04.bin.b64 exact2/part05.bin.b64 exact2/part06.bin.b64 exact2/part07.bin.b64; do
-            base64 --decode --ignore-garbage "$f" >> site/index.html
-          done
-          test "$(wc -c < site/index.html)" -eq 82262
-          echo "e812f3603324d5a0201ee8dd53b7f10e3995861a433e1285ab949a66a80a94a6  site/index.html" | sha256sum -c -
-          cp colormetric_privacy_policy.html site/colormetric_privacy_policy.html
+          cp privacy_policy.html site/index.html
+          cp privacy_policy.html site/privacy_policy.html
           cp app-ads.txt site/app-ads.txt
+          cp index.html site/demo.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
