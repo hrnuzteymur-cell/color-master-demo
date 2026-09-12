@@ -38,6 +38,8 @@ jobs:
           done
           test "$(wc -c < site/index.html)" -eq 82262
           echo "e812f3603324d5a0201ee8dd53b7f10e3995861a433e1285ab949a66a80a94a6  site/index.html" | sha256sum -c -
+          cp colormetric_privacy_policy.html site/colormetric_privacy_policy.html
+          cp app-ads.txt site/app-ads.txt
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
